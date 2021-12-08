@@ -1,0 +1,54 @@
+/*  WHERE
+Where faz parte da seleção
+SELEÇÃO: Para seleção utilizamos o WHERE (ONDE) para filtrar a tabela 
+
+Uma tabela é um conjunto de dados, então temos diversos campos dela. Se eu quiser trazer apenas trazer
+os registros do sexo feminino, eu irei SELECIONAR, utilizando o WHERE para me mostrar registros apenas 
+do sexo feminino. Mas não necessariamente os parâmetros que irei utilizar para filtrar minha tabela irão 
+estar projeção dela.
+*/
+
+/* SELECIONANDO PELO SEXO MASCULINO */
+SELECT NOME, SEXO
+FROM CLIENTE
+WHERE SEXO = 'M';
+
+/* Dentro de um arquivo texto quero filtrar os registros que sejam iguais algum parametro que eu definir. Exemplo
+em um banco de dados eu tenho um endereço completo de uma pessoa, e quero filtrar pelo estado:
+
+SELECT NOME, ENDERECO 
+FROM CLIENTE
+WHERE ENDERECO = 'RJ'
+
+Se no campo 'RJ' tiver mais informações, como por exemplo um endereço completo: "RIACHUELO - CENTRO - RIO DE JANEIRO - RJ',
+o banco de dados não retornará nada. Então eu usarei o operador LIKE (COMO), é utilizado quando é necessário pesquisar alguma palavra 
+dentro de um campo com várias informações, ele é utilizado no lugar da igualdade ("=").
+
+SELECT NOME, ENDERECO 
+FROM CLIENTE
+WHERE ENDERECO LIKE 'RJ';
+
+Porém, é necessário utilizar o caracter coringa além do LIKE, ele é representado pelo "%", sem ele o banco de dados retornará nada.
+% = Qualquer coisa
+*/
+
+/* O campo começa com qualquer coisa e a palavra chave termina com RJ*/
+SELECT NOME, ENDERECO 
+FROM CLIENTE
+WHERE ENDERECO 
+LIKE '%RJ';
+
+/* A palavra chave é OSCAR CURY e termina com qualquer coisa*/
+SELECT NOME, ENDERECO 
+FROM CLIENTE
+WHERE ENDERECO LIKE 'OSCAR CURY%';
+
+/* O campo começa com qualquer coisa e termina com qualquer coisa, a palavra chave está no meio das informações*/
+SELECT NOME, ENDERECO 
+FROM CLIENTE
+WHERE ENDERECO 
+LIKE '%CENTRO%';
+
+
+
+
