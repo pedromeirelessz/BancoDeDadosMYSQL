@@ -20,4 +20,4 @@ INSERT INTO CLIENTE VALUES('ANA','F','ANA@GLOBO',98863832,'11923122','PRES ANTON
 
 						  
 INSERT INTO CLIENTE(NOME,SEXO,ENDERECO,TELEFONE,CPF) VALUES('CLARA','F','SENADOR SOARES - TIJUCA - RIO DE JANEIRO - RJ','947783396', 99999999999),
-                                                                                                              ('PEDRO','M','RIACHUELO - CENTRO - RIO DE JANEIRO - RJ','457783396', 99999999999);
+                                                                                                                ('PEDRO','M','RIACHUELO - CENTRO - RIO DE JANEIRO - RJ','457783396', 99999999999);

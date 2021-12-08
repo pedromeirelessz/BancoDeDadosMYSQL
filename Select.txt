@@ -1,0 +1,33 @@
+/* SELECT
+O comando SELECT(SELECIONE) é utilizado para projeção de tabelas.
+
+O select faz parte da projeção, mas o que é projeção?
+É o que se projeta na tela, o que você quer ver, nos utilizamos essa função para
+mostrar tabelas que existem e que não existem no banco de dados
+tenho uma tabela chamda alfabeto com três campos:  A, B, C.
+ SELECT A, B C
+ FROM ALFABETO;
+*/
+
+/* NOW() : Data atual
+AS: coloque o nome desse campo de...
+*/
+SELECT NOW() AS 'DATA_HORA', 'Pedro Meireles' AS 'DESENVOLVEDOR';
+
+SELECT 'BANCO DE DADOS';
+
+/*FROM: a partir de, ou seja, os campos que serão projetados na tela serão selecionados a partir da tabela 
+que  você definir */
+
+SELECT NOME AS 'CLIENTE', SEXO, EMAIL 
+FROM CLIENTE;
+
+SELECT NOME, SEXO, EMAIL, ENDERECO
+FROM CLIENTE;
+
+SELECT NOME, SEXO, EMAIL, ENDERECO, NOW() AS 'DATA_HORA' 
+FROM CLIENTE;
+
+/* *: asterisco seleciona todos os campos da tabela*/
+
+SELECT * FROM CLIENTE;
